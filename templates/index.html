@@ -1,0 +1,54 @@
+<html >
+<head>
+  <title>car prediction</title>
+</head>
+
+<body>
+
+<img src=
+
+"https://seeklogo.com/images/M/mercedes-benz-classic-center-iran-logo-8B57C20A8E-seeklogo.com.png"
+         alt="benz image", width="150", height="50", style="float:left">
+
+<img src=
+"https://seeklogo.com/images/M/mercedes-benz-logo-5A0141E595-seeklogo.com.png"
+         alt="benz image", width="200", height="70", style="float:right">
+
+<style>
+body {
+  background-image: url("https://images.pexels.com/photos/120049/pexels-photo-120049.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-position: 200%;
+  background-size: cover;
+}
+</style>
+
+ <div>
+	<h1>car prediction</h1>
+
+    <form action="{{ url_for('getprediction')}}"method="post">
+    	<input type="text" name="year  " placeholder="year " required="required" />
+        <input type="text" name="transmission" placeholder="transmission" required="required" />
+        <input type="text" name="engine  " placeholder="engine " required="required" />
+        <input type="text" name="max_power" placeholder="max_power" required="required" />
+        <input type="text" name="torque" placeholder="torque" required="required" />
+
+
+
+
+
+
+
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">getprediction</button>
+    </form>
+
+   <br>
+   <br>
+   {{ output }}
+
+ </div>
+
+
+</body>
+</html>
